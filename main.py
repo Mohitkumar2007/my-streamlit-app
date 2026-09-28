@@ -91,10 +91,10 @@ with exports:
     result=clean.copy();result["analysis_cluster"]=labels+1;result["analysis_PC1"]=Z[:,0];result["analysis_PC2"]=Z[:,1];st.dataframe(result,hide_index=True,use_container_width=True)
     l,r=st.columns(2);l.download_button("Download clustering results",result.to_csv(index=False).encode(),"clustering_results.csv","text/csv",use_container_width=True);r.download_button("Download evaluation metrics",metrics.to_csv(index=False).encode(),"cluster_evaluation.csv","text/csv",use_container_width=True)
 with guide:
-    st.markdown("1. Select numeric measurements.  
+    st.markdown("""1. Select numeric measurements.  
 2. Median-impute and standardize.  
 3. Project onto PC1 and PC2.  
 4. Fit K-Means on the PCA projection.  
-5. Compare inertia and silhouette scores before choosing k.")
+5. Compare inertia and silhouette scores before choosing k.""")
     st.info(f"PC1 and PC2 retain {variance.sum():.1%} of total variance.")
 st.divider();st.caption("ClusterLab · Wisconsin Breast Cancer · PCA + K-Means")
