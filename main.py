@@ -99,4 +99,8 @@ with guide:
     st.info(f"PC1 and PC2 retain {variance.sum():.1%} of total variance.")
 st.divider();st.caption("ClusterLab · Wisconsin Breast Cancer · PCA + K-Means")
 
-st.footer("Made by Mohit Kumar A")
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center;'>Made by Mohit Kumar A</div>",
+    unsafe_allow_html=True
+)
