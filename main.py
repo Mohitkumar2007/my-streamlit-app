@@ -98,3 +98,5 @@ with guide:
 5. Compare inertia and silhouette scores before choosing k.""")
     st.info(f"PC1 and PC2 retain {variance.sum():.1%} of total variance.")
 st.divider();st.caption("ClusterLab · Wisconsin Breast Cancer · PCA + K-Means")
+
+st.footer("Made by Mohit Kumar A")
